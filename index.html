@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Security Meta Tags -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta http-equiv="X-Content-Type-Options" content="nosniff">
+  <meta name="referrer" content="no-referrer-when-downgrade">
+  <meta name="robots" content="index, follow">
+  <title>Adrian Portfolio</title>
+  <link rel="stylesheet" href="../_assets/static/css/c3R5bGVz.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Boldonse&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="/favicon.ico">
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Boldonse&display=swap');
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      color: #ffffff;
+      background-color: #121212;
+      position: relative;
+      overflow-x: hidden;
+    }
+
+    #universe-bg {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      z-index: -1;
+      background: radial-gradient(#0f0f0f, #121212);
+      overflow: hidden;
+    }
+
+    .star {
+      position: absolute;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.8);
+      width: 2px;
+      height: 2px;
+      transition: transform 0.2s ease-out;
+    }
+
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: rgba(14, 14, 14, 0.352);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(20px);
+      color: rgba(13, 13, 13, 0.799);
+      padding: 10px 30px;
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 1000;
+      box-sizing: border-box;
+      border-bottom: none;
+      background: linear-gradient(to bottom, rgba(0, 0, 0, 0.974), rgba(51, 51, 51, 0))
+    }
+
+    .navbar.navbar-transparent {
+      background: transparent;
+      backdrop-filter: none;
+      -webkit-backdrop-filter: none;
+      border-bottom: none;
+    }
+
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 1rem;
+    }
+
+    .nav-links a {
+      color: #ffffff;
+      text-decoration: none;
+      position: relative;
+      transition: color 0.3s ease;
+    }
+
+    .nav-links a:hover {
+      color: #00ffff;
+      text-shadow: 0 0 5px #00ffff, 0 0 10px #00ffff, 0 0 20px #00ffff;
+      animation: pulse-glow 1.5s infinite;
+    }
+
+    @keyframes pulse-glow {
+      0% {
+        text-shadow: 0 0 5px #00ffff, 0 0 10px #00ffff, 0 0 20px #00ffff;
+      }
+
+      50% {
+        text-shadow: 0 0 10px #00ffff, 0 0 20px #00ffff, 0 0 30px #00ffff;
+      }
+
+      100% {
+        text-shadow: 0 0 5px #00ffff, 0 0 10px #00ffff, 0 0 20px #00ffff;
+      }
+    }
+
+    .logo {
+      color: #ffffff;
+      font-weight: bold;
+    }
+
+    section h2,
+    header h1,
+    header p {
+      color: #ffffff;
+    }
+
+    .skills-list span,
+    .tools-list span {
+      background-color: #2a2a2a;
+      color: #ffffff;
+      padding: 0.5rem 1rem;
+      border-radius: 5px;
+      margin: 0.3rem;
+      display: inline-block;
+    }
+
+    .project,
+    .experience,
+    .education,
+    .contact {
+      background-color: #1e1e1e;
+      padding: 1rem;
+      border-radius: 10px;
+      margin-bottom: 1.5rem;
+    }
+
+    a {
+      color: #80cbc4;
+    }
+
+    .scroll-to-top {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: rgb(20, 20, 20);
+      color: #ffffff;
+      border: none;
+      border-radius: 50%;
+      font-weight: 600;
+      width: 50px;
+      height: 50px;
+      font-size: 1.5rem;
+      cursor: pointer;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition-duration: 0.3s;
+      overflow: hidden;
+      box-shadow: 0px 0px 0px 4px rgba(180, 160, 255, 0.253);
+      z-index: 10;
+    }
+
+    .svgIcon {
+      width: 12px;
+      transition-duration: 0.3s;
+    }
+
+    .svgIcon path {
+      fill: white;
+    }
+
+    .scroll-to-top:hover {
+      width: 140px;
+      border-radius: 50px;
+      transition-duration: 0.3s;
+      background-color: rgb(181, 160, 255);
+      align-items: center;
+    }
+
+    .scroll-to-top:hover .svgIcon {
+      /* width: 20px; */
+      transition-duration: 0.3s;
+      transform: translateY(-200%);
+    }
+
+    .scroll-to-top::before {
+      position: absolute;
+      bottom: -20px;
+      content: "Back to Top";
+      color: white;
+      /* transition-duration: .3s; */
+      font-size: 0px;
+    }
+
+    .scroll-to-top:hover::before {
+      font-size: 13px;
+      opacity: 1;
+      bottom: unset;
+      /* transform: translateY(-30px); */
+      transition-duration: 0.3s;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="loading-screen">
+    <div class="loader">
+      <div class="blackhole">
+        <div class="blackhole-circle"></div>
+        <div class="blackhole-disc"></div>
+      </div>
+      <div class="curve">
+        <svg viewBox="0 0 500 500">
+          <path id="loading" d="M73.2,148.6c4-6.1,65.5-96.8,178.6-95.6c111.3,1.2,170.8,90.3,175.1,97"></path>
+          <text width="500">
+            <textPath xlink:href="#loading">
+              loading...
+            </textPath>
+          </text>
+        </svg>
+      </div>
+    </div>
+  </div>
+  <div id="universe-bg"></div>
+  <nav class="navbar">
+    <div class="logo"><a href="index.html"><img href="/" src="/_assets/static/media/logo.png" alt="Your Logo"
+          width="50px" height="50px"></a></div>
+    <div class="menu-toggle" id="menu-toggle"></div>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#tools">Tools</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#education">Education</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li><a href="service.html">Service</a></li>
+    </ul>
+  </nav>
+
+  <div class="navbar-fade"></div>
+
+  <!-- Graphic Design -->
+  <div>
+    <header>
+      <div class="spinner">
+        <div class="spinner1"></div>
+      </div>
+      <div class="spinner2">
+        <div class="spinner3"></div>
+      </div>
+      <div class="overlay">
+        <a href="https://drive.google.com/file/d/1hRZ5PVA6fPRpeMMsD_u1_nse4HqyZpCU/view?usp=sharing" target="_blank">
+          <button class="header-round-btn">
+            <p class="button__text">
+              <span style="--index: 0;">V</span>
+              <span style="--index: 1;">I</span>
+              <span style="--index: 2;">S</span>
+              <span style="--index: 3;">I</span>
+              <span style="--index: 4;">T</span>
+              <span style="--index: 5;"> </span>
+              <span style="--index: 6;">M</span>
+              <span style="--index: 7;">Y</span>
+
+              <span style="--index: 8;"> </span>
+              <span style="--index: 9;">R</span>
+              <span style="--index: 10;">E</span>
+              <span style="--index: 11;">S</span>
+              <span style="--index: 12;">U</span>
+              <span style="--index: 13;">M</span>
+              <span style="--index: 14;">E</span>
+            </p>
+
+            <div class="button__circle">
+              <svg viewBox="0 0 14 15" fill="none" xmlns="http://www.w3.org/2000/svg" class="button__icon" width="14">
+                <path
+                  d="M13.376 11.552l-.264-10.44-10.44-.24.024 2.28 6.96-.048L.2 12.56l1.488 1.488 9.432-9.432-.048 6.912 2.304.024z"
+                  fill="currentColor"></path>
+              </svg>
+
+              <svg viewBox="0 0 14 15" fill="none" width="14" xmlns="http://www.w3.org/2000/svg"
+                class="button__icon button__icon--copy">
+                <path
+                  d="M13.376 11.552l-.264-10.44-10.44-.24.024 2.28 6.96-.048L.2 12.56l1.488 1.488 9.432-9.432-.048 6.912 2.304.024z"
+                  fill="currentColor"></path>
+              </svg>
+            </div>
+          </button></a>
+        <div class="arrow-down">&#8595;</div>
+      </div>
+      <div class="header-content">
+        <p>
+          <span class="typing-text" id="typing"></span><span class="cursor">|</span>
+        </p>
+      </div>
+      <div class="outer">
+        <div class="dot"></div>
+        <div class="card2">
+          <div class="profile-circle">
+            <img src="/_assets/static/media/myphoto.png" alt="Your Profile Image">
+          </div>
+          <div class="ray"></div>
+          <div class="text">Adrian Milante</div>
+          <div>PORTFOLIO</div>
+          <div class="line topl"></div>
+          <div class="line leftl"></div>
+          <div class="line bottoml"></div>
+          <div class="line rightl"></div>
+        </div>
+      </div>
+    </header>
+  </div>
+  <div class="container" style="max-width: 1200px; margin: auto; padding: 20px;">
+    <section id="about">
+      <h2>About Me</h2>
+      <div class="about-content" style="display: flex; flex-wrap: wrap; gap: 20px; align-items: center;">
+        <div class="about-image" style="flex: 1; min-width: 200px;">
+          <div class="container24 noselect">
+            <div class="canvas">
+              <div class="tracker tr-1"></div>
+              <div class="tracker tr-2"></div>
+              <div class="tracker tr-3"></div>
+              <div class="tracker tr-4"></div>
+              <div class="tracker tr-5"></div>
+              <div class="tracker tr-6"></div>
+              <div class="tracker tr-7"></div>
+              <div class="tracker tr-8"></div>
+              <div class="tracker tr-9"></div>
+              <div class="tracker tr-10"></div>
+              <div class="tracker tr-11"></div>
+              <div class="tracker tr-12"></div>
+              <div class="tracker tr-13"></div>
+              <div class="tracker tr-14"></div>
+              <div class="tracker tr-15"></div>
+              <div class="tracker tr-16"></div>
+              <div class="tracker tr-17"></div>
+              <div class="tracker tr-18"></div>
+              <div class="tracker tr-19"></div>
+              <div class="tracker tr-20"></div>
+              <div class="tracker tr-21"></div>
+              <div class="tracker tr-22"></div>
+              <div class="tracker tr-23"></div>
+              <div class="tracker tr-24"></div>
+              <div class="tracker tr-25"></div>
+              <div id="card">
+                <p id="prompt">I'ts Me</p>
+
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="about-text" style="flex: 2;">
+          <p>Hello I'm Adrian, I'm High school graduated and SHS-STEM Graduate.
+
+            I have a Computer Skills in Video editing , photo editing, graphic designing, advertisement, digital
+            marketing. In my one experience of Graphic designing and Editing Skills in my past job has been helpful for
+            me to easily adapt and understand the tool that I Never using before, which help me to find job opportunity
+            quickly as my role of in Graphic Designing.
+
+            I have some knowledge about other Editing Tools like, Filmora, Adobe Illustrator, Davinci Resolve,
+            Photoshop. and also, I have knowledge and how to use about Programming like HTML, JAVA SCRIPT, LUA, PYTHON.
+            and also I know how to Make UI&UX Design.
+
+            I enjoy learning new things , excelling in teamwork, working well under pressure, possessing strong time
+            management and communication skills, and being detail-oriented and quick to learn new concepts.
+
+          </p>
+        </div>
+      </div>
+      <a href="/" target="_blank">
+        <button class="custom-button">
+          See more
+        </button></a>
+    </section>
+
+    <section id="skills">
+      <h2>Skills</h2>
+      <div class="scroll-container">
+        <div class="skills-track">
+          <div class="skills-list">
+            <span>Computer Programming</span><span>HTML</span><span>CSS</span><span>JavaScript</span>
+            <span>Customer Service</span><span>Game Development</span><span>Graphic Design</span>
+            <span>Video Editing</span><span>Photo Editing</span><span>3D Models</span><span>GFX</span>
+          </div>
+          <!-- Duplicate for seamless infinite scroll -->
+          <div class="skills-list">
+            <span>Computer Programming</span><span>HTML</span><span>CSS</span><span>JavaScript</span>
+            <span>Customer Service</span><span>Game Development</span><span>Graphic Design</span>
+            <span>Video Editing</span><span>Photo Editing</span><span>3D Models</span><span>GFX</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="tools">
+      <h2>Tools</h2>
+      <div class="scroll-container">
+        <div class="tools-track">
+          <div class="tools-list">
+            <span>Figma</span><span>Blender</span><span>VS Code</span><span>GitHub</span>
+            <span>Adobe Illustrator</span><span>Adobe Photoshop</span><span>Canva</span><span>CapCut</span>
+            <span>Filmora</span><span>OBS Studios</span><span>DaVinci Resolve</span><span>Clip Champ</span>
+            <span>Microsoft Office</span>
+          </div>
+          <!-- Duplicate for seamless loop -->
+          <div class="tools-list">
+            <span>Figma</span><span>Blender</span><span>VS Code</span><span>GitHub</span>
+            <span>Adobe Illustrator</span><span>Adobe Photoshop</span><span>Canva</span><span>CapCut</span>
+            <span>Filmora</span><span>OBS Studios</span><span>DaVinci Resolve</span><span>Clip Champ</span>
+            <span>Microsoft Office</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects">
+      <h2>Projects</h2>
+      <div class="project">
+        <h3>Pending...</h3>
+        <p>...</p>
+        <p><strong>Tools:</strong> Microsoft Office</p>
+        <a href="https://your-link-here.com" target="_blank">
+          <div class="button-container">
+            <button class="button">
+              <span class="gradient-overlay"></span>
+              <span class="button-content">
+                <div class="text-icon-container">
+                  <span class="button-text">View Project</span>
+                  <svg class="button-icon" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path clip-rule="evenodd"
+                      d="M8.22 5.22a.75.75 0 0 1 1.06 0l4.25 4.25a.75.75 0 0 1 0 1.06l-4.25 4.25a.75.75 0 0 1-1.06-1.06L11.94 10 8.22 6.28a.75.75 0 0 1 0-1.06Z"
+                      fill-rule="evenodd"></path>
+                  </svg>
+                </div>
+              </span>
+            </button>
+          </div>
+        </a>
+      </div>
+      <div class="project">
+        <h3>Website Landing Page Design</h3>
+        <p>Designed and built a responsive landing page using HTML, CSS, and JavaScript.</p>
+        <p><strong>Tools:</strong> VS Code, GitHub</p>
+        <a href="https://your-link-here.com" target="_blank">
+          <div class="button-container">
+            <button class="button">
+              <span class="gradient-overlay"></span>
+              <span class="button-content">
+                <div class="text-icon-container">
+                  <span class="button-text">View Project</span>
+                  <svg class="button-icon" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path clip-rule="evenodd"
+                      d="M8.22 5.22a.75.75 0 0 1 1.06 0l4.25 4.25a.75.75 0 0 1 0 1.06l-4.25 4.25a.75.75 0 0 1-1.06-1.06L11.94 10 8.22 6.28a.75.75 0 0 1 0-1.06Z"
+                      fill-rule="evenodd"></path>
+                  </svg>
+                </div>
+              </span>
+            </button>
+          </div>
+        </a>
+      </div>
+      <div class="project">
+        <h3>Pending...</h3>
+        <p>...</p>
+        <p><strong>Tools:</strong> VS CODE</p>
+        <a href="/" target="_blank">
+          <div class="button-container">
+            <button class="button">
+              <span class="gradient-overlay"></span>
+              <span class="button-content">
+                <div class="text-icon-container">
+                  <span class="button-text">View Project</span>
+                  <svg class="button-icon" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path clip-rule="evenodd"
+                      d="M8.22 5.22a.75.75 0 0 1 1.06 0l4.25 4.25a.75.75 0 0 1 0 1.06l-4.25 4.25a.75.75 0 0 1-1.06-1.06L11.94 10 8.22 6.28a.75.75 0 0 1 0-1.06Z"
+                      fill-rule="evenodd"></path>
+                  </svg>
+                </div>
+              </span>
+            </button>
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <section id="experience">
+      <h2>Experience</h2>
+      <div class="experience">
+        <strong>Customer Support Specialist & Digital Marketing for Advertising Graphic Design</strong> — A.L.D.
+        Company<br>
+        <em>Jan 2023 – Dec 2024</em>
+        <ul>
+          <li>Handled customer inquiries via chat and email</li>
+          <li>Resolved issues with empathy and professionalism</li>
+          <li>Collaborated with cross-functional teams to improve customer service processes</li>
+          <li>Making Digital Marketing Graphic Design for Business Industry</li>
+        </ul>
+        <p><strong>Tools:</strong> Microsoft 360 - Email - Social Media - Canva - Adobe Photoshop</p>
+      </div>
+      <div class="experience">
+        <strong>Data Entry Specialist Freelance</strong> — Upwork<br>
+        <em>Feb 2025 – March 2025</em>
+        <ul>
+          <li>Handled Data</li>
+          <li>Resolved issues with empathy and professionalism</li>
+        </ul>
+        <p><strong>Tools:</strong> Microsoft Excel - Upwork</p>
+      </div>
+    </section>
+
+    <section id="education">
+      <h2>Education</h2>
+      <div class="education">
+        <strong>2nd Year in Information Technology</strong> — CITI GLOBAL COLLEGE<br>
+        <em>2023 – 2024</em>
+        <ul>
+          <li>Undergraduate</li>
+        </ul>
+      </div>
+      <div class="education">
+        <strong>SHS in Science, Technology, Engineering, and Mathematics</strong> — CITI GLOBAL COLLEGE<br>
+        <em>2020 – 2022</em>
+      </div>
+      <div class="education">
+        <strong>JHS in Junior High School </strong> — Judge Feliciano Senior High School & Cabuyao Integrated National
+        High School<br>
+        <em>2016 – 2019</em>
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2>Contact</h2>
+      <div class="contact">
+        <p>Contact me: <a>+63 961-791-7354</a></p>
+        <p>Feel free to reach out at <a href="mailto:your.email@example.com" id="email-link">Email Me</a></p>
+      </div>
+    </section>
+  </div>
+
+  <button class="scroll-to-top" id="scrollToTop">
+    <svg class="svgIcon" viewBox="0 0 384 512">
+      <path
+        d="M214.6 41.4c-12.5-12.5-32.8-12.5-45.3 0l-160 160c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L160 141.2V448c0 17.7 14.3 32 32 32s32-14.3 32-32V141.2L329.4 246.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3l-160-160z">
+      </path>
+    </svg>
+  </button>
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-left">
+        <h4 style="color: rgb(161, 161, 161); font-size: 15px; font-weight: normal;">About Us</h4>
+        <p>We are a team of passionate developers creating amazing websites.</p>
+      </div>
+      <div class="footer-right">
+        <h4 style="color: rgb(161, 161, 161); font-size: 15px; font-weight: normal;">CONTACT</h4>
+        <ul>
+          <li>Email: info@example.com</li>
+          <li>Phone: +1 (123) 456-7890</li>
+          <li>Address: 123 Example St, City, Country</li>
+        </ul>
+      </div>
+      <div class="footer-nav">
+        <h4 style="color: rgb(161, 161, 161); font-size: 15px; font-weight: normal;">Quick Links</h4>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Project</a></li>
+          <li><a href="#">Services</a></li>
+          <li><a href="#">sign-up</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="card">
+      <a href="#" class="socialContainer containerOne">
+        <svg class="socialSvg instagramSvg" viewBox="0 0 16 16">
+          <path
+            d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z">
+          </path>
+        </svg>
+      </a>
+
+      <a href="#" class="socialContainer containerTwo">
+        <svg class="socialSvg twitterSvg" viewBox="0 0 16 16">
+          <path
+            d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z">
+          </path>
+        </svg> </a>
+
+      <a href="#" class="socialContainer containerThree">
+        <svg class="socialSvg linkdinSvg" viewBox="0 0 448 512">
+          <path
+            d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z">
+          </path>
+        </svg>
+      </a>
+
+      <a href="#" class="socialContainer containerFour">
+        <svg class="socialSvg whatsappSvg" viewBox="0 0 16 16">
+          <path
+            d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z">
+          </path>
+        </svg>
+      </a>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 Adrian Milante. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+
+    document.getElementById("email-link").href = "mailto:" + "official.baidoadrianmilante@gmail.com" + "@" + "gmail.com";
+  </script>
+  <script src="../_assets/static/js/script.js"></script>
+</body>
+
+</html>

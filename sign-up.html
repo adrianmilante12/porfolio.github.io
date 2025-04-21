@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Security Meta Tags -->
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://trusted.cdn.com; style-src 'self' 'unsafe-inline'">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta http-equiv="X-Content-Type-Options" content="nosniff">
+  <meta name="referrer" content="no-referrer-when-downgrade">
+  <meta name="robots" content="index, follow">
+  <meta name="description" content="High-Qiality Design, Vercel, and Shopify." />
+  <meta property="og:title" content="Adrian Milante" />
+  <meta property="og:description"
+       content="High-Qiality Design, Vercel, and Shopify." />
+  <meta property="og:image:type" content="image/png" />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:creator" content="@adrianmilante" />
+  <meta name="twitter:title" content="Adrian Milante" />
+  <meta name="twitter:description"
+       content="High-Qiality Design, Vercel, and Shopify." />
+  <meta name="twitter:image:type" content="image/png" />
+  <title>Welcome</title>
+  <link rel="stylesheet" href="/assets/css/U2FsdGVkX19Y25SehcL1YtHV9dxy1rpI.css">
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <script type="text/javascript">
+      (function() {
+          // https://dashboard.emailjs.com/admin/account
+          emailjs.init({
+            publicKey: "VV1YoBYSXosAvVA-M",
+          });
+      })();
+  </script>
+  <script type="text/javascript">
+      window.onload = function() {
+          document.getElementById('contact-form').addEventListener('submit', function(event) {
+              event.preventDefault();
+              // these IDs from the previous steps
+              emailjs.sendForm('contact_service', 'contact_form', this)
+                  .then(() => {
+                      console.log('SUCCESS!');
+                  }, (error) => {
+                      console.log('FAILED...', error);
+                  });
+          });
+      }
+  </script>
+  <link rel="icon" type="image/png" href="assets/ico/favicon.ico">
+</head>
+<body style="background: url('/assets/img/design02.gif') no-repeat center center fixed; background-size: cover;">
+    <div class="cursor" id="cursor"></div>
+    <div class="container">
+    <div class="header">
+    </div>  
+        <div class="left-column">
+            <div class="title-wrapper">
+                <div class="paragraph-container">
+            <p>Your amazing text goes here.</p><div class="stars">⭐⭐⭐⭐⭐</div></div>
+            <h2>MAKE YOUR DESIRE</h2>
+            <h1>DESIGN</h1>
+        </div>
+            <div class="line"></div>
+            <p>Another paragraph goes here.</p>
+            <div class="form-container">
+                <form id="contact-form">
+                    <input type="hidden" name="csrf_token" value="<?php echo $_SESSION['csrf_token']; ?>">
+                    <div class="name-wave-group">
+                    <input required="" type="text" class="input">
+                    <span class="bar"></span>
+                    <label class="label">
+                        <span class="label-char" style="--index: 0">N</span>
+                        <span class="label-char" style="--index: 1">a</span>
+                        <span class="label-char" style="--index: 2">m</span>
+                        <span class="label-char" style="--index: 3">e</span>
+                      </label></div>
+                    <div class="email-wave-group">
+                    <input required="" type="email" class="input">
+                    <span class="bar"></span>
+                    <label class="label">
+                        <span class="label-char" style="--index: 0">E</span>
+                        <span class="label-char" style="--index: 1">m</span>
+                        <span class="label-char" style="--index: 2">a</span>
+                        <span class="label-char" style="--index: 3">i</span>
+                        <span class="label-char" style="--index: 4">l</span>
+                      </label></div>
+                    <button type="submit" class="submit-btn">Submit Form</button>
+
+                </form>
+            </div>
+            <p>Another paragraph below the button.</p>
+            <div class="logo">
+                <img src="/assets/img/vc1.png" alt="Logo" width="100">
+            </div>
+        </div>
+    </div>
+    <script src="/assets/js/script.js"></script>
+</body>
+
+</html>
